@@ -18,13 +18,13 @@ Build AI chatbots with Acontext integration for persistent storage, file operati
 **Install:**
 
 ```bash
-# 安装所有 skills
+# Install all skills
 npx skills add mbt1909432/acontext-skills
 
-# 只安装这个 skill
+# Install only this skill
 npx skills add mbt1909432/acontext-skills --skill acontext-chatbot-integration
 
-# 或者直接指定路径
+# Or specify the path directly
 npx skills add https://github.com/mbt1909432/acontext-skills/tree/main/acontext-chatbot-integration
 ```
 
