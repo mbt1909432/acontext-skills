@@ -16,8 +16,16 @@ Build AI chatbots with Acontext integration for persistent storage, file operati
 - Token-aware context compression
 
 **Install:**
+
 ```bash
+# 安装所有 skills
 npx skills add mbt1909432/acontext-skills
+
+# 只安装这个 skill
+npx skills add mbt1909432/acontext-skills --skill acontext-chatbot-integration
+
+# 或者直接指定路径
+npx skills add https://github.com/mbt1909432/acontext-skills/tree/main/acontext-chatbot-integration
 ```
 
 ## Usage
