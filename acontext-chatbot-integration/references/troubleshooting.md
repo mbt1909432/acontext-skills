@@ -1,5 +1,44 @@
 # Troubleshooting
 
+## Artifacts API Returns "database error"
+
+```
+GET /api/artifacts?diskId=xxx&path=file.txt
+Response: {"error":"database error"}
+```
+
+### Cause: client.disks.artifacts.get() Method Issue
+
+The `client.disks.artifacts.get()` method may fail with a database error in some cases.
+
+### Fix: Use DISK_TOOLS.executeTool() Instead
+
+For reading files from disk in API endpoints, use DISK_TOOLS directly:
+
+```ts
+// WRONG - may return database error
+const result = await client.disks.artifacts.get(diskId, {
+  filePath: "/",
+  filename: "file.txt",
+  withPublicUrl: true,
+  withContent: true,
+});
+
+// CORRECT - use DISK_TOOLS
+import { DISK_TOOLS } from "@acontext/acontext";
+
+const ctx = DISK_TOOLS.formatContext(client, diskId);
+const result = await DISK_TOOLS.executeTool(ctx, "read_file_disk", {
+  filename: "file.txt",  // Use 'filename', not 'path'
+});
+```
+
+### Note on Parameter Names
+
+- `write_file_disk`: uses `filename` and `content`
+- `read_file_disk`: uses `filename` (NOT `path`)
+- `list_disk`: uses `path` for directory listing
+
 ## 400 Parameter Error
 
 ```
