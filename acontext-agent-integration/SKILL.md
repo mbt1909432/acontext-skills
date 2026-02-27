@@ -1,11 +1,11 @@
 ---
-name: acontext-chatbot-integration
+name: acontext-agent-integration
 description: "Build AI chatbots with Acontext SDK integration. Use when implementing: conversation history storage, disk file tools (read/write/grep), Python sandbox execution, artifact management with disk:: protocol, or context compression. Keywords: Acontext, session management, disk tools, sandbox, Python execution."
 ---
 
-# Acontext Chatbot Integration
+# Acontext Agent Integration
 
-Integration patterns for building AI chatbots with Acontext SDK - session management, disk tools, sandbox execution, and artifact storage.
+Integration patterns for building AI agents with Acontext SDK - session management, disk tools, sandbox execution, and artifact storage.
 
 ## Architecture
 

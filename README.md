@@ -4,9 +4,9 @@ Agent skills for building AI chatbots with Acontext SDK integration.
 
 ## Available Skills
 
-### acontext-chatbot-integration
+### acontext-agent-integration
 
-Build AI chatbots with Acontext integration for persistent storage, file operations, and Python sandbox execution.
+Build AI agents with Acontext integration for persistent storage, file operations, and Python sandbox execution.
 
 **Features:**
 - Session management with conversation history storage
@@ -22,10 +22,10 @@ Build AI chatbots with Acontext integration for persistent storage, file operati
 npx skills add mbt1909432/acontext-skills
 
 # Install only this skill
-npx skills add mbt1909432/acontext-skills --skill acontext-chatbot-integration
+npx skills add mbt1909432/acontext-skills --skill acontext-agent-integration
 
 # Or specify the path directly
-npx skills add https://github.com/mbt1909432/acontext-skills/tree/main/acontext-chatbot-integration
+npx skills add https://github.com/mbt1909432/acontext-skills/tree/main/acontext-agent-integration
 ```
 
 ## Usage
@@ -40,4 +40,4 @@ After installation, the skill will be available in your AI agent. Use it when:
 
 ## Documentation
 
-See [acontext-chatbot-integration/SKILL.md](./acontext-chatbot-integration/SKILL.md) for detailed usage instructions.
+See [acontext-agent-integration/SKILL.md](./acontext-agent-integration/SKILL.md) for detailed usage instructions.
